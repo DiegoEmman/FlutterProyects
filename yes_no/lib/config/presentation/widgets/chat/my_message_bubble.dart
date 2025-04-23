@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:yes_no/domain/entities/message.dart';
 
 class MyMesaggeBubble extends StatelessWidget {
 
-    final String message;
+    final Message message;
 
 
   const MyMesaggeBubble({
@@ -24,9 +25,9 @@ class MyMesaggeBubble extends StatelessWidget {
             color: colors.primary,
             borderRadius: BorderRadius.circular(20.0),
           ),
-          child: const Text(
-            'Hola, ¿cómo estás?',
-            style: TextStyle(color: Colors.white),
+          child: Text(
+            message.text,
+            style: const TextStyle(color: Colors.white),
           ),
         ),
         const SizedBox(
